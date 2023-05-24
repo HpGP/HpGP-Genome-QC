@@ -14,6 +14,4 @@
 
 ## 5. An example dot plot for QC
 
-![Screenshot 2023-05-24 at 12 03 01 AM](https://github.com/HpGP/HpGP-Genome-QC/assets/49001003/8fc73339-cf07-4e31-950a-7d6eb46f31a8)
-
-
+![Screenshot 2023-05-24 at 12 04 39 AM](https://github.com/HpGP/HpGP-Genome-QC/assets/49001003/ddf444ee-91ef-4bdf-af74-64c413f0a8c4)
