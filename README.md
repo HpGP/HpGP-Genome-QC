@@ -7,6 +7,7 @@
 ## 2. Download busco database https://busco-data.ezlab.org/v5/data/lineages/campylobacterales_odb10.2020-03-06.tar.gz
 
 ## 3. Run run.busco.sh
+BUSCO v5.1.3
 
 ## 4. Busco result
 
