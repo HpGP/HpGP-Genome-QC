@@ -1,5 +1,6 @@
 # HpGP-Genome-QC
 
+```
 ## 0. dotplot using Gepard-1.40.jar https://cube.univie.ac.at/gepard
 
 ## 1. Install busco package from https://busco.ezlab.org/
@@ -16,3 +17,4 @@ BUSCO v5.1.3
 ## 5. An example dot plot for QC
 
 ![Screenshot 2023-05-24 at 12 04 39 AM](https://github.com/HpGP/HpGP-Genome-QC/assets/49001003/ddf444ee-91ef-4bdf-af74-64c413f0a8c4)
+```
