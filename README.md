@@ -9,6 +9,7 @@
 
 ## 3. Run run.busco.sh
 BUSCO v5.1.3
+```
 
 ## 4. Busco result
 
@@ -17,4 +18,3 @@ BUSCO v5.1.3
 ## 5. An example dot plot for QC
 
 ![Screenshot 2023-05-24 at 12 04 39 AM](https://github.com/HpGP/HpGP-Genome-QC/assets/49001003/ddf444ee-91ef-4bdf-af74-64c413f0a8c4)
-```
