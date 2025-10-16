@@ -140,6 +140,8 @@ chmod +x run.busco.sh
 
 All de novo assembled genomes have <span style="color:red"> > 95% </span>completeness.
 
+**<span style="color:darkorange">Important:</span>**
+
 <img width="1053" height="836" alt="Screenshot 2025-10-16 at 2 06 32 PM" src="https://github.com/user-attachments/assets/f3f6b641-23c8-462c-9f40-5147ca2f4783" />
 
 **A Dot plot example**
