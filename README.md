@@ -151,7 +151,7 @@ All *de novo* assembled genomes have **> 95%** completeness indicating the high 
 ## References
 
 - **Gepard:** Krumsiek et al. *Bioinformatics* (2007)  
-- **BUSCO:** Manni et al. *Bioinformatics* (2021)  
+- **BUSCO:** Simão et al. *Bioinformatics* (2015)  
 
 ---
 
