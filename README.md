@@ -79,24 +79,46 @@ Save the following as `run.busco.sh`:
 #!/usr/bin/env bash
 set -euo pipefail
 
-# ---- user inputs ----
-IN_FA="sample.fna"                             # Input assembly
-LINEAGE_DIR="$HOME/busco_dbs/lineages"         # Lineage folder
-LINEAGE_NAME="campylobacterales_odb10"
-THREADS="${THREADS:-8}"
-OUTPREFIX="busco_${LINEAGE_NAME}_$(date +%Y%m%d)"
-# ---------------------
+# conda activate bacgen3
 
-# Load conda environment
-source "$(conda info --base)/etc/profile.d/conda.sh"
-conda activate busco-5.1.3
+#source /Users/wangdi/apps/anaconda3/bin/activate bacgen3
+source /data/wangdi/bin/anaconda3/bin/activate bacgen3
 
-# Ensure Augustus config is writable
-: "${AUGUSTUS_CONFIG_PATH:?Set AUGUSTUS_CONFIG_PATH}"
+LIST=$1
 
-busco   -i "$IN_FA"   -o "$OUTPREFIX"   -m genome   -l "$LINEAGE_NAME"   --offline   --download_path "$LINEAGE_DIR"   --cpu "$THREADS"   --force
+echo "## Complete BUSCOs (C)" > ${LIST}.busco.sum.txt
+echo "## Complete and single-copy BUSCOs (S)" >> ${LIST}.busco.sum.txt
+echo "## Complete and duplicated BUSCOs (D)" >> ${LIST}.busco.sum.txt
+echo "## Fragmented BUSCOs (F)" >> ${LIST}.busco.sum.txt
+echo "## Missing BUSCOs (M)" >> ${LIST}.busco.sum.txt
+echo "## Total BUSCO groups searched" >> ${LIST}.busco.sum.txt
+echo "## strain,C,S,D,F,M,n" >> ${LIST}.busco.sum.txt
 
-echo "✅ BUSCO completed. Results in: ${OUTPREFIX}"
+## loop list
+for f in `cat $LIST`
+do
+
+## copy fasta
+cat ./fna/${f}.fasta > ${f}.fna
+
+echo "== $f =="
+
+##
+## download busco db
+##
+## https://busco-data.ezlab.org/v5/data/lineages/campylobacterales_odb10.2020-03-06.tar.gz
+busco -m genome -i ${f}.fna -o ${f} -l campylobacterales_odb10
+
+## length
+len=$(seqlen.sh ${f}.fna | awk '{print $2}')
+
+## combine all
+line=$(grep "C:" ${f}/short_summary.specific.campylobacterales_odb10.${f}.txt | sed 's/\[/,/; s/\]//' | sed 's/C://; s/S://; s/D://; s/F://; s/M://; s/n://'| awk '{print $1}')
+echo "$f,$len,$line" >> ${LIST}.busco.sum.txt
+
+rm -rf ${f}.fna
+
+done
 ```
 
 Then make it executable and run:
@@ -108,7 +130,7 @@ chmod +x run.busco.sh
 
 ---
 
-## 📊 Outputs
+## Outputs
 
 - `short_summary_*.txt` — BUSCO completeness summary  
 - `run_*/full_table.tsv` — detailed per-gene results  
@@ -116,14 +138,14 @@ chmod +x run.busco.sh
 
 ---
 
-## 🧾 References
+## References
 
 - **Gepard:** Krumsiek et al. *Bioinformatics* (2007)  
 - **BUSCO:** Manni et al. *Bioinformatics* (2021)  
 
 ---
 
-## 🛠 Example Folder Structure
+## Example Folder Structure
 
 ```
 project/
@@ -139,7 +161,7 @@ project/
 
 ---
 
-## 🧪 Example Results
+## Example Results
 
 | Metric | Value |
 |--------|--------|
@@ -149,11 +171,11 @@ project/
 
 ---
 
-## 🔍 Citation
+## Citation
 
 If you use this pipeline, please cite:
 
-> Krumsiek et al., 2007. Gepard: a rapid and sensitive tool for creating dotplots on genome scale. *Bioinformatics* 23(8):1026–1028.  
-> Manni et al., 2021. BUSCO Update: novel and streamlined workflows along with broader and deeper phylogenetic coverage for scoring of eukaryotic, prokaryotic, and viral genomes. *Bioinformatics* 37(12): 3137–3143.
-
+> Krumsiek et al., 2007. Gepard: a rapid and sensitive tool for creating dotplots on genome scale. *Bioinformatics* 23(8):1026–1028. [https://doi.org/10.1093/bioinformatics/btm039](https://doi.org/10.1093/bioinformatics/btm039) 
+> Simão et al., 2015. BUSCO: assessing genome assembly and annotation completeness with single-copy orthologs. *Bioinformatics* 31(19), 3210–3212. [https://doi.org/10.1093/bioinformatics/btv351](https://doi.org/10.1093/bioinformatics/btv351)
+> Thorell et al., 2023. The Helicobacter pylori Genome Project: insights into H. pylori population structure from analysis of a worldwide collection of complete genomes. *Nature Communications*, 14, 8184. [https://doi.org/10.1038/s41467-023-43971-3](https://doi.org/10.1038/s41467-023-43971-3)
 ---
