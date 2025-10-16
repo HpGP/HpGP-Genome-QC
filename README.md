@@ -179,4 +179,8 @@ If you use this pipeline, please cite:
 > Simão et al., 2015. BUSCO: assessing genome assembly and annotation completeness with single-copy orthologs. *Bioinformatics* 31(19), 3210–3212. [https://doi.org/10.1093/bioinformatics/btv351](https://doi.org/10.1093/bioinformatics/btv351)
 > Thorell et al., 2023. The Helicobacter pylori Genome Project: insights into H. pylori population structure from analysis of a worldwide collection of complete genomes. *Nature Communications*, 14, 8184. [https://doi.org/10.1038/s41467-023-43971-3](https://doi.org/10.1038/s41467-023-43971-3)
 
+> Krumsiek et al., 2007. Gepard: a rapid and sensitive tool for creating dotplots on genome scale. *Bioinformatics* 23(8):1026–1028. [https://doi.org/10.1093/bioinformatics/btm039](https://doi.org/10.1093/bioinformatics/btm039)
+> Manni et al., 2021. BUSCO Update: novel and streamlined workflows along with broader and deeper phylogenetic coverage for scoring of eukaryotic, prokaryotic, and viral genomes. *Bioinformatics* 37(12): 3137–3143. [https://doi.org/10.1093/bioinformatics/btv351](https://doi.org/10.1093/bioinformatics/btv351)
+> Thorell, K., Muñoz-Ramírez, Z.Y., Wang, D., Sandoval-Motta, S., Boscolo Agostini, R., Ghirotto, S., Torres, R.C., HpGP Research Network, Falush, D., Camargo, M.C., & Rabkin, C.S. (2023). *The Helicobacter pylori Genome Project: insights into H. pylori population structure from analysis of a worldwide collection of complete genomes.* *Nature Communications*, 14, Article number: 8184. [https://doi.org/10.1038/s41467-023-43971-3](https://doi.org/10.1038/s41467-023-43971-3)
+
 ---
