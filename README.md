@@ -140,7 +140,7 @@ chmod +x run.busco.sh
 
 <img width="1053" height="836" alt="Screenshot 2025-10-16 at 2 06 32 PM" src="https://github.com/user-attachments/assets/f3f6b641-23c8-462c-9f40-5147ca2f4783" />
 
-**Dot plot example**
+**A Dot plot example**
 
 <img width="694" height="730" alt="Screenshot 2025-10-16 at 2 09 01 PM" src="https://github.com/user-attachments/assets/d595d34d-0ca1-4cf8-a729-19bd0a6f4dfc" />
 
