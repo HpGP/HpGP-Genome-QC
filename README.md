@@ -7,7 +7,7 @@ This repository provides a quick setup and reproducible workflow for:
 
 ---
 
-## 📦 Requirements
+## Requirements
 
 - **Java ≥ 8** (for Gepard)
 - **Conda (Miniconda or Anaconda)**
@@ -16,7 +16,7 @@ This repository provides a quick setup and reproducible workflow for:
 
 ---
 
-## 🧩 0. Dotplot using Gepard-1.40.jar
+## 0. Dotplot using Gepard-1.40.jar
 
 **Install & run:**
 
@@ -37,7 +37,7 @@ Output will be an image showing sequence similarity.
 
 ---
 
-## 🧠 1. Install BUSCO v5.1.3
+## 1. Install BUSCO v5.1.3
 
 ```bash
 # Create and activate a clean conda environment
@@ -58,7 +58,7 @@ export AUGUSTUS_CONFIG_PATH="$HOME/augustus_config"
 
 ---
 
-## 🧬 2. Download BUSCO Database
+## 2. Download BUSCO Database
 
 ```bash
 mkdir -p $HOME/busco_dbs/lineages
@@ -71,7 +71,7 @@ tar -xzf campylobacterales_odb10.2020-03-06.tar.gz
 
 ---
 
-## 🚀 3. Run BUSCO
+## 3. Run BUSCO
 
 Save the following as `run.busco.sh`:
 
@@ -157,7 +157,3 @@ If you use this pipeline, please cite:
 > Manni et al., 2021. BUSCO Update: novel and streamlined workflows along with broader and deeper phylogenetic coverage for scoring of eukaryotic, prokaryotic, and viral genomes. *Bioinformatics* 37(12): 3137–3143.
 
 ---
-
-**Maintainer:** Difei Wang  
-**Institution:** U.S. Department of Health & Human Services (NIH)  
-**Contact:** [wangdi@nih.gov](mailto:wangdi@nih.gov)
