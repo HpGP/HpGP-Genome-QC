@@ -138,7 +138,7 @@ chmod +x run.busco.sh
 
 **HpGP BUSCO completeness results for 1012 H. pylori genomes**
 
-All *de novo* assembled genomes have **> 95%** completeness indicating the high quality of the sequences.
+All *de novo* assembled genomes have **> 95%** completeness indicating the high quality of the sequences. Only a few of them could not be circularized which uses 200 "N" to mark the breakpoint.
 
 <img width="1053" height="836" alt="Screenshot 2025-10-16 at 2 06 32 PM" src="https://github.com/user-attachments/assets/f3f6b641-23c8-462c-9f40-5147ca2f4783" />
 
