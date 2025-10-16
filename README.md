@@ -136,7 +136,7 @@ chmod +x run.busco.sh
 - `run_*/full_table.tsv` — detailed per-gene results  
 - `plots/` — optional summary plots (if generated)  
 
-HpGP BUSCO completeness results
+**HpGP BUSCO completeness results for 1012 H. pylori genomes**
 
 <img width="1053" height="836" alt="Screenshot 2025-10-16 at 2 06 32 PM" src="https://github.com/user-attachments/assets/f3f6b641-23c8-462c-9f40-5147ca2f4783" />
 
