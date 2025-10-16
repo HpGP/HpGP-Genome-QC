@@ -26,7 +26,7 @@ echo "== $f =="
 ## download busco db
 ##
 ## https://busco-data.ezlab.org/v5/data/lineages/campylobacterales_odb10.2020-03-06.tar.gz
-busco -m genome -i ${f}.fna -o ${f} -l campylobacterales_odb10
+busco -m genome -i ${f}.fna -o ${f} -l ./busco_dbs/lineages/campylobacterales_odb10
 
 ## length
 len=$(seqlen.sh ${f}.fna | awk '{print $2}')

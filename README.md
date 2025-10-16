@@ -150,12 +150,13 @@ chmod +x run.busco.sh
 ```
 project/
 │
-├── sample.fna
+├── fna/sample.fna
 ├── run.busco.sh
 ├── busco_dbs/
 │   └── lineages/
 │       └── campylobacterales_odb10/
 ├── Gepard-1.40.jar
+├── HpGP-1012set.busco.xlsx
 └── README.md
 ```
 
